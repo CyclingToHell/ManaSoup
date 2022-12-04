@@ -9,15 +9,19 @@ public class Switch : MonoBehaviour
     //Arrays
     public GameObject[] hintergrundArray;
     public GameObject[] schafArray;
-    public GameObject[] platformArray;
+    public GameObject[] platformSmallArray;
+    public GameObject[] platformMediumArray;
+    public GameObject[] platformLargeArray;
     public GameObject[] oneWayPlatformArray;
     public GameObject[] fallingPlatformArray;
     public GameObject[] spikesArray;
     public GameObject[] bodenArray;
     public GameObject[] deckeArray;
     public GameObject[] fillBlockArray;
-    public GameObject[] wallLeftArray;
-    public GameObject[] wallRightArray;
+    public GameObject[] wallArray;
+    public GameObject[] hangingFillBlockArray;
+    public GameObject[] hangingGroundBlockArray;
+    
 
     //Timer
     [SerializeField] private int seconds = 20;
@@ -28,41 +32,50 @@ public class Switch : MonoBehaviour
     //Phase1
     [SerializeField] private Sprite Phase1Hintergrund;
     [SerializeField] private Sprite Phase1Schaf;
-    [SerializeField] private Sprite Phase1Platform;
+    [SerializeField] private Sprite Phase1PlatformSmall;
+    [SerializeField] private Sprite Phase1PlatformMedium;
+    [SerializeField] private Sprite Phase1PlatformLarge;
     [SerializeField] private Sprite Phase1OneWayPlatform;
     [SerializeField] private Sprite Phase1FallingPlatform;
     [SerializeField] private Sprite Phase1Spikes;
     [SerializeField] private Sprite Phase1Boden;
     [SerializeField] private Sprite Phase1Decke;
     [SerializeField] private Sprite Phase1FillBlock;
-    [SerializeField] private Sprite Phase1WallLeft;
-    [SerializeField] private Sprite Phase1WallRight;
+    [SerializeField] private Sprite Phase1Wall;
+    [SerializeField] private Sprite Phase1HangingFillBlock;
+    [SerializeField] private Sprite Phase1HangingGroundBlock;
 
     //Phase2
     [SerializeField] private Sprite Phase2Hintergrund;
     [SerializeField] private Sprite Phase2Schaf;
-    [SerializeField] private Sprite Phase2Platform;
+    [SerializeField] private Sprite Phase2PlatformSmall;
+    [SerializeField] private Sprite Phase2PlatformMedium;
+    [SerializeField] private Sprite Phase2PlatformLarge;
     [SerializeField] private Sprite Phase2OneWayPlatform;
     [SerializeField] private Sprite Phase2FallingPlatform;
     [SerializeField] private Sprite Phase2Spikes;
     [SerializeField] private Sprite Phase2Boden;
     [SerializeField] private Sprite Phase2Decke;
     [SerializeField] private Sprite Phase2FillBlock;
-    [SerializeField] private Sprite Phase2WallLeft;
-    [SerializeField] private Sprite Phase2WallRight;
+    [SerializeField] private Sprite Phase2Wall;
+    [SerializeField] private Sprite Phase2HangingFillBlock;
+    [SerializeField] private Sprite Phase2HangingGroundBlock;
 
     //Phase3
     [SerializeField] private Sprite Phase3Hintergrund;
     [SerializeField] private Sprite Phase3Schaf;
-    [SerializeField] private Sprite Phase3Platform;
+    [SerializeField] private Sprite Phase3PlatformSmall;
+    [SerializeField] private Sprite Phase3PlatformMedium;
+    [SerializeField] private Sprite Phase3PlatformLarge;
     [SerializeField] private Sprite Phase3OneWayPlatform;
     [SerializeField] private Sprite Phase3FallingPlatform;
     [SerializeField] private Sprite Phase3Spikes;
     [SerializeField] private Sprite Phase3Boden;
     [SerializeField] private Sprite Phase3Decke;
     [SerializeField] private Sprite Phase3FillBlock;
-    [SerializeField] private Sprite Phase3WallLeft;
-    [SerializeField] private Sprite Phase3WallRight;
+    [SerializeField] private Sprite Phase3Wall;
+    [SerializeField] private Sprite Phase3HangingFillBlock;
+    [SerializeField] private Sprite Phase3HangingGroundBlock;
     //Musik 
     
     // Start is called before the first frame update
@@ -95,9 +108,17 @@ public class Switch : MonoBehaviour
                 {
                 oneWayPlatformArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase1OneWayPlatform;
                 }
-            for(int i = 0; i < platformArray.Length; i++)
+            for(int i = 0; i < platformSmallArray.Length; i++)
                 {
-                platformArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Platform;
+                platformSmallArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase1PlatformSmall;
+                }
+            for(int i = 0; i < platformMediumArray.Length; i++)
+                {
+                platformMediumArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase1PlatformMedium;
+                }
+            for(int i = 0; i < platformLargeArray.Length; i++)
+                {
+                platformLargeArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase1PlatformLarge;
                 }
             for(int i = 0; i < fallingPlatformArray.Length; i++)
                 {
@@ -119,13 +140,17 @@ public class Switch : MonoBehaviour
                 {
                 fillBlockArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase1FillBlock;
                 }
-            for(int i = 0; i < wallLeftArray.Length; i++)
+            for(int i = 0; i < wallArray.Length; i++)
                 {
-                wallLeftArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase1WallLeft;
+                wallArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Wall;
                 }
-            for(int i = 0; i < wallRightArray.Length; i++)
+            for(int i = 0; i < hangingFillBlockArray.Length; i++)
                 {
-                wallRightArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase1WallRight;
+                hangingFillBlockArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase1HangingFillBlock;
+                }
+            for(int i = 0; i < hangingGroundBlockArray.Length; i++)
+                {
+                hangingGroundBlockArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase1HangingGroundBlock;
                 }
         }
         //Phase 2
@@ -143,9 +168,17 @@ public class Switch : MonoBehaviour
                 {
                 oneWayPlatformArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase2OneWayPlatform;
                 }
-            for(int i = 0; i < platformArray.Length; i++)
+            for(int i = 0; i < platformSmallArray.Length; i++)
                 {
-                platformArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Platform;
+                platformSmallArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase2PlatformSmall;
+                }
+            for(int i = 0; i < platformMediumArray.Length; i++)
+                {
+                platformMediumArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase2PlatformMedium;
+                }
+            for(int i = 0; i < platformLargeArray.Length; i++)
+                {
+                platformLargeArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase2PlatformLarge;
                 }
             for(int i = 0; i < fallingPlatformArray.Length; i++)
                 {
@@ -167,15 +200,18 @@ public class Switch : MonoBehaviour
                 {
                 fillBlockArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase2FillBlock;
                 }
-            for(int i = 0; i < wallLeftArray.Length; i++)
+            for(int i = 0; i < wallArray.Length; i++)
                 {
-                wallLeftArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase2WallLeft;
+                wallArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Wall;
                 }
-            for(int i = 0; i < wallRightArray.Length; i++)
+            for(int i = 0; i < hangingFillBlockArray.Length; i++)
                 {
-                wallRightArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase2WallRight;
+                hangingFillBlockArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase1HangingFillBlock;
                 }
-            
+            for(int i = 0; i < hangingGroundBlockArray.Length; i++)
+                {
+                hangingGroundBlockArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase1HangingGroundBlock;
+                }
         }
         
         //Phase 3
@@ -193,9 +229,17 @@ public class Switch : MonoBehaviour
                 {
                 oneWayPlatformArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase3OneWayPlatform;
                 }
-            for(int i = 0; i < platformArray.Length; i++)
+            for(int i = 0; i < platformSmallArray.Length; i++)
                 {
-                platformArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase3Platform;
+                platformSmallArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase3PlatformSmall;
+                }
+            for(int i = 0; i < platformMediumArray.Length; i++)
+                {
+                platformMediumArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase3PlatformMedium;
+                }
+            for(int i = 0; i < platformLargeArray.Length; i++)
+                {
+                platformLargeArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase3PlatformLarge;
                 }
             for(int i = 0; i < fallingPlatformArray.Length; i++)
                 {
@@ -217,13 +261,17 @@ public class Switch : MonoBehaviour
                 {
                 fillBlockArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase3FillBlock;
                 }
-            for(int i = 0; i < wallLeftArray.Length; i++)
+            for(int i = 0; i < wallArray.Length; i++)
                 {
-                wallLeftArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase3WallLeft;
+                wallArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase3Wall;
                 }
-            for(int i = 0; i < wallRightArray.Length; i++)
+            for(int i = 0; i < hangingFillBlockArray.Length; i++)
                 {
-                wallRightArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase3WallRight;
+                hangingFillBlockArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase3HangingFillBlock;
+                }
+            for(int i = 0; i < hangingGroundBlockArray.Length; i++)
+                {
+                hangingGroundBlockArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase3HangingGroundBlock;
                 }
             
         }

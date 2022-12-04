@@ -44,49 +44,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49b1a3172447667468424347fc4fa9ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hintergrund: {fileID: 3695428531720715177, guid: 5cb3701beb52a364cb5e272dbbd54d32, type: 3}
-  schaf: {fileID: 362355050423377088, guid: e034d102146ba6f47868c062e91750aa, type: 3}
-  platform: {fileID: 5794704595584665604, guid: 6f2ea0bc180c8d748a7c8aa6899c6bc5, type: 3}
-  oneWayPlatform: {fileID: 517341478850830647, guid: e36759d04db897a4b9b9907c5b65339c, type: 3}
-  fallingPlatform: {fileID: 0}
-  spikes: {fileID: 0}
-  boden: {fileID: 0}
-  decke: {fileID: 0}
-  fillBlock: {fileID: 0}
-  wallLeft: {fileID: 0}
-  wallRight: {fileID: 0}
-  seconds: 5
+  hintergrundArray: []
+  schafArray: []
+  platformSmallArray: []
+  platformMediumArray: []
+  platformLargeArray: []
+  oneWayPlatformArray: []
+  fallingPlatformArray: []
+  spikesArray: []
+  bodenArray: []
+  deckeArray: []
+  fillBlockArray: []
+  wallArray: []
+  hangingFillBlockArray: []
+  hangingGroundBlockArray: []
+  seconds: 20
   timeStart: 0
   Phase1Hintergrund: {fileID: 21300000, guid: a171f8678c1e84f2e93b52ec7fc959b4, type: 3}
   Phase1Schaf: {fileID: -511188185, guid: f94b257b6afee274abb13687cb4bcc4c, type: 3}
-  Phase1Platform: {fileID: 21300000, guid: 8e3e612e7df32436caea6afcffea8d95, type: 3}
-  Phase1OneWayPlatform: {fileID: 0}
-  Phase1FallingPlatform: {fileID: 0}
+  Phase1PlatformSmall: {fileID: 21300000, guid: 3d01fe4bba11d4321bb44694386a373d, type: 3}
+  Phase1PlatformMedium: {fileID: 21300000, guid: 511b66e73a06a440ba78cc9b0850bdb5, type: 3}
+  Phase1PlatformLarge: {fileID: 21300000, guid: 69a0a906701494b0db7762f4e50c02f4, type: 3}
+  Phase1OneWayPlatform: {fileID: 21300000, guid: 3d01fe4bba11d4321bb44694386a373d, type: 3}
+  Phase1FallingPlatform: {fileID: 21300000, guid: 3d01fe4bba11d4321bb44694386a373d, type: 3}
   Phase1Spikes: {fileID: 0}
   Phase1Boden: {fileID: 0}
   Phase1Decke: {fileID: 0}
   Phase1FillBlock: {fileID: 0}
-  Phase1WallLeft: {fileID: 0}
-  Phase1WallRight: {fileID: 0}
+  Phase1Wall: {fileID: 0}
+  Phase1HangingFillBlock: {fileID: 0}
+  Phase1HangingGroundBlock: {fileID: 0}
   Phase2Hintergrund: {fileID: 21300000, guid: ff9985115fc9340878dc2ffe418f913b, type: 3}
   Phase2Schaf: {fileID: -1232815934, guid: f94b257b6afee274abb13687cb4bcc4c, type: 3}
-  Phase2Platform: {fileID: 21300000, guid: 7558d31305d50465fa8be707eac3b1bc, type: 3}
+  Phase2PlatformSmall: {fileID: 0}
+  Phase2PlatformMedium: {fileID: 0}
+  Phase2PlatformLarge: {fileID: 0}
   Phase2OneWayPlatform: {fileID: 0}
   Phase2FallingPlatform: {fileID: 0}
   Phase2Spikes: {fileID: 0}
   Phase2Boden: {fileID: 0}
   Phase2Decke: {fileID: 0}
   Phase2FillBlock: {fileID: 0}
-  Phase2WallLeft: {fileID: 0}
-  Phase2WallRight: {fileID: 0}
+  Phase2Wall: {fileID: 0}
+  Phase2HangingFillBlock: {fileID: 0}
+  Phase2HangingGroundBlock: {fileID: 0}
   Phase3Hintergrund: {fileID: 21300000, guid: 80ddb488e960545a08c9d5c054dca730, type: 3}
   Phase3Schaf: {fileID: 1288699723, guid: f94b257b6afee274abb13687cb4bcc4c, type: 3}
-  Phase3Platform: {fileID: 21300000, guid: b2f119a02ec1644ea9e0364a52fe1323, type: 3}
+  Phase3PlatformSmall: {fileID: 0}
+  Phase3PlatformMedium: {fileID: 0}
+  Phase3PlatformLarge: {fileID: 0}
   Phase3OneWayPlatform: {fileID: 0}
   Phase3FallingPlatform: {fileID: 0}
   Phase3Spikes: {fileID: 0}
   Phase3Boden: {fileID: 0}
   Phase3Decke: {fileID: 0}
   Phase3FillBlock: {fileID: 0}
-  Phase3WallLeft: {fileID: 0}
-  Phase3WallRight: {fileID: 0}
+  Phase3Wall: {fileID: 0}
+  Phase3HangingFillBlock: {fileID: 0}
+  Phase3HangingGroundBlock: {fileID: 0}
