@@ -52,11 +52,15 @@ public class PlayerMovement : MonoBehaviour
 
     //Audio
     [SerializeField] private AudioSource soundJump;
+    [SerializeField] private AudioSource soundWalk;
+    [SerializeField] private AudioSource soundDash;
+    [SerializeField] private AudioSource soundWall;
+
 
     void Update()
     {
         //CoyoteTime
-         if (IsGrounded())
+        if (IsGrounded())
         {
             coyoteTimeCounter = coyoteTime;
         }
@@ -86,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
             if (IsGrounded() || doubleJump)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-
+                
                 doubleJump = !doubleJump;
             }
         }
@@ -134,7 +138,10 @@ public class PlayerMovement : MonoBehaviour
         //DashAnim
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
+            
             StartCoroutine(Dash());
+            soundDash.Play();
+            
         }
         Flip();
     }
@@ -160,6 +167,7 @@ public class PlayerMovement : MonoBehaviour
     private bool IsWalled()
     {
         return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
+        
     }
 
     private void WallSlide()
@@ -167,10 +175,12 @@ public class PlayerMovement : MonoBehaviour
         if (IsWalled() && !IsGrounded() && horizontal != 0f)
         {
             isWallSliding = true;
+            soundWall.Play();
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
         }
         else
         {
+
             isWallSliding = false;
         }
     }
@@ -193,6 +203,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && wallJumpingCounter > 0f)
         {
             isWallJumping = true;
+            soundJump.Play();
             rb.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
             wallJumpingCounter = 0f;
 

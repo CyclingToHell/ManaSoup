@@ -6,22 +6,18 @@ using UnityEngine;
 
 public class Switch : MonoBehaviour
 {
-
-    //GameObjects
-    [SerializeField] private GameObject hintergrund;
-    [SerializeField] private GameObject schaf;
-    [SerializeField] private GameObject platform;
-    [SerializeField] private GameObject oneWayPlatform;
-    [SerializeField] private GameObject fallingPlatform;
-    [SerializeField] private GameObject spikes;
-    [SerializeField] private GameObject boden;
-    [SerializeField] private GameObject decke;
-    [SerializeField] private GameObject fillBlock;
-    [SerializeField] private GameObject wallLeft;
-    [SerializeField] private GameObject wallRight;
-
-    
-
+    //Arrays
+    public GameObject[] hintergrundArray;
+    public GameObject[] schafArray;
+    public GameObject[] platformArray;
+    public GameObject[] oneWayPlatformArray;
+    public GameObject[] fallingPlatformArray;
+    public GameObject[] spikesArray;
+    public GameObject[] bodenArray;
+    public GameObject[] deckeArray;
+    public GameObject[] fillBlockArray;
+    public GameObject[] wallLeftArray;
+    public GameObject[] wallRightArray;
 
     //Timer
     [SerializeField] private int seconds = 20;
@@ -87,121 +83,155 @@ public class Switch : MonoBehaviour
         //Phase 1 
         if(timeStart <= seconds)
         {
-            hintergrund.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Hintergrund;
-            schaf.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Schaf;
-            platform.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Platform;
-            oneWayPlatform.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1OneWayPlatform;
-            fallingPlatform.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1FallingPlatform;
-            spikes.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Spikes;
-            boden.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Boden;
-            decke.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Decke;
-            fillBlock.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1FillBlock;
-            wallLeft.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1WallLeft;
-            wallRight.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1WallRight;
-
-            
+            for(int i = 0; i < hintergrundArray.Length; i++)
+                {
+                hintergrundArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Hintergrund;
+                }
+            for(int i = 0; i < schafArray.Length; i++)
+                {
+                schafArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Schaf;
+                }
+            for(int i = 0; i < oneWayPlatformArray.Length; i++)
+                {
+                oneWayPlatformArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase1OneWayPlatform;
+                }
+            for(int i = 0; i < platformArray.Length; i++)
+                {
+                platformArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Platform;
+                }
+            for(int i = 0; i < fallingPlatformArray.Length; i++)
+                {
+                fallingPlatformArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase1FallingPlatform;
+                }
+            for(int i = 0; i < spikesArray.Length; i++)
+                {
+                spikesArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Spikes;
+                }
+            for(int i = 0; i < bodenArray.Length; i++)
+                {
+                bodenArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Boden;
+                }
+            for(int i = 0; i < deckeArray.Length; i++)
+                {
+                deckeArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Decke;
+                }
+            for(int i = 0; i < fillBlockArray.Length; i++)
+                {
+                fillBlockArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase1FillBlock;
+                }
+            for(int i = 0; i < wallLeftArray.Length; i++)
+                {
+                wallLeftArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase1WallLeft;
+                }
+            for(int i = 0; i < wallRightArray.Length; i++)
+                {
+                wallRightArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase1WallRight;
+                }
         }
         //Phase 2
         else if(timeStart > seconds && timeStart <= 2*seconds)
         {
-            hintergrund.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Hintergrund;
-            schaf.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Schaf;
-            platform.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Platform;
-            oneWayPlatform.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2OneWayPlatform;
-            fallingPlatform.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2FallingPlatform;
-            spikes.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Spikes;
-            boden.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Boden;
-            decke.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Decke;
-            fillBlock.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2FillBlock;
-            wallLeft.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2WallLeft;
-            wallRight.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2WallRight;
+            for(int i = 0; i < hintergrundArray.Length; i++)
+                {
+                hintergrundArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Hintergrund;
+                }
+            for(int i = 0; i < schafArray.Length; i++)
+                {
+                schafArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Schaf;
+                }
+            for(int i = 0; i < oneWayPlatformArray.Length; i++)
+                {
+                oneWayPlatformArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase2OneWayPlatform;
+                }
+            for(int i = 0; i < platformArray.Length; i++)
+                {
+                platformArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Platform;
+                }
+            for(int i = 0; i < fallingPlatformArray.Length; i++)
+                {
+                fallingPlatformArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase2FallingPlatform;
+                }
+            for(int i = 0; i < spikesArray.Length; i++)
+                {
+                spikesArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Spikes;
+                }
+            for(int i = 0; i < bodenArray.Length; i++)
+                {
+                bodenArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Boden;
+                }
+            for(int i = 0; i < deckeArray.Length; i++)
+                {
+                deckeArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Decke;
+                }
+            for(int i = 0; i < fillBlockArray.Length; i++)
+                {
+                fillBlockArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase2FillBlock;
+                }
+            for(int i = 0; i < wallLeftArray.Length; i++)
+                {
+                wallLeftArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase2WallLeft;
+                }
+            for(int i = 0; i < wallRightArray.Length; i++)
+                {
+                wallRightArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase2WallRight;
+                }
             
         }
-        //Phase 1 
+        
+        //Phase 3
         else if(timeStart > 2*seconds && timeStart <= 3*seconds)
         {
-            hintergrund.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Hintergrund;
-            schaf.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Schaf;
-            platform.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Platform;
-            oneWayPlatform.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1OneWayPlatform;
-            fallingPlatform.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1FallingPlatform;
-            spikes.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Spikes;
-            boden.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Boden;
-            decke.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Decke;
-            fillBlock.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1FillBlock;
-            wallLeft.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1WallLeft;
-            wallRight.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1WallRight;
+           for(int i = 0; i < hintergrundArray.Length; i++)
+                {
+                hintergrundArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase3Hintergrund;
+                }
+            for(int i = 0; i < schafArray.Length; i++)
+                {
+                schafArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase3Schaf;
+                }
+            for(int i = 0; i < oneWayPlatformArray.Length; i++)
+                {
+                oneWayPlatformArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase3OneWayPlatform;
+                }
+            for(int i = 0; i < platformArray.Length; i++)
+                {
+                platformArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase3Platform;
+                }
+            for(int i = 0; i < fallingPlatformArray.Length; i++)
+                {
+                fallingPlatformArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase3FallingPlatform;
+                }
+            for(int i = 0; i < spikesArray.Length; i++)
+                {
+                spikesArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase3Spikes;
+                }
+            for(int i = 0; i < bodenArray.Length; i++)
+                {
+                bodenArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase3Boden;
+                }
+            for(int i = 0; i < deckeArray.Length; i++)
+                {
+                deckeArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase3Decke;
+                }
+            for(int i = 0; i < fillBlockArray.Length; i++)
+                {
+                fillBlockArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase3FillBlock;
+                }
+            for(int i = 0; i < wallLeftArray.Length; i++)
+                {
+                wallLeftArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase3WallLeft;
+                }
+            for(int i = 0; i < wallRightArray.Length; i++)
+                {
+                wallRightArray[i].gameObject.GetComponent<SpriteRenderer>().sprite = Phase3WallRight;
+                }
             
         }
-        //Phase 2
-        else if(timeStart > 3*seconds && timeStart <= 4*seconds)
-        {
-            hintergrund.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Hintergrund;
-            schaf.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Schaf;
-            platform.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Platform;
-            oneWayPlatform.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2OneWayPlatform;
-            fallingPlatform.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2FallingPlatform;
-            spikes.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Spikes;
-            boden.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Boden;
-            decke.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Decke;
-            fillBlock.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2FillBlock;
-            wallLeft.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2WallLeft;
-            wallRight.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2WallRight;
-            
-        }
-        //Phase 3
-        else if(timeStart > 4*seconds && timeStart <= 5*seconds)
-        {
-            hintergrund.gameObject.GetComponent<SpriteRenderer>().sprite = Phase3Hintergrund;
-            schaf.gameObject.GetComponent<SpriteRenderer>().sprite = Phase3Schaf;
-            platform.gameObject.GetComponent<SpriteRenderer>().sprite = Phase3Platform;
-            oneWayPlatform.gameObject.GetComponent<SpriteRenderer>().sprite = Phase3OneWayPlatform;
-            fallingPlatform.gameObject.GetComponent<SpriteRenderer>().sprite = Phase3FallingPlatform;
-            spikes.gameObject.GetComponent<SpriteRenderer>().sprite = Phase3Spikes;
-            boden.gameObject.GetComponent<SpriteRenderer>().sprite = Phase3Boden;
-            decke.gameObject.GetComponent<SpriteRenderer>().sprite = Phase3Decke;
-            fillBlock.gameObject.GetComponent<SpriteRenderer>().sprite = Phase3FillBlock;
-            wallLeft.gameObject.GetComponent<SpriteRenderer>().sprite = Phase3WallLeft;
-            wallRight.gameObject.GetComponent<SpriteRenderer>().sprite = Phase3WallRight;
-            
-        }
-        //Phase 2
-        else if(timeStart > 5*seconds && timeStart <= 6*seconds)
-        {
-            hintergrund.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Hintergrund;
-            schaf.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Schaf;
-            platform.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Platform;
-            oneWayPlatform.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2OneWayPlatform;
-            fallingPlatform.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2FallingPlatform;
-            spikes.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Spikes;
-            boden.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Boden;
-            decke.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2Decke;
-            fillBlock.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2FillBlock;
-            wallLeft.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2WallLeft;
-            wallRight.gameObject.GetComponent<SpriteRenderer>().sprite = Phase2WallRight;
-            
-        }
-        //Phase 1
-        else if(timeStart > 6*seconds && timeStart <= 7*seconds)
-        {
-            hintergrund.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Hintergrund;
-            schaf.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Schaf;
-            platform.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Platform;
-            oneWayPlatform.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1OneWayPlatform;
-            fallingPlatform.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1FallingPlatform;
-            spikes.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Spikes;
-            boden.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Boden;
-            decke.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1Decke;
-            fillBlock.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1FillBlock;
-            wallLeft.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1WallLeft;
-            wallRight.gameObject.GetComponent<SpriteRenderer>().sprite = Phase1WallRight;
-            
-        }
+        
         //Restart
-        else if (timeStart > 7*seconds)
+        else if (timeStart > 3*seconds)
         {
             timeStart = 0;
-            sp.color = Color.blue;
             print("Error");
         }
 
