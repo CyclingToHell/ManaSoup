@@ -72,7 +72,7 @@ public class Enemy : MonoBehaviour
         else if (timeStart > 3*seconds)
         {
             timeStart = 0;
-            sp.color = Color.blue;
+            
             print("Error");
             transform.position = origin;
         }
