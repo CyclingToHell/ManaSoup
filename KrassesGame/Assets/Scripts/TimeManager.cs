@@ -40,41 +40,18 @@ public class TimeManager : MonoBehaviour
         //Phase 2
         else if(timeStart > seconds && timeStart <= 2*seconds)
         {
-            sp.color = Color.red;
+            sp.color = Color.white;
             
         }
         //Phase 1 
         else if(timeStart > 2*seconds && timeStart <= 3*seconds)
         {
-            sp.color = Color.blue;
-            
-        }
-        //Phase 2
-        else if(timeStart > 3*seconds && timeStart <= 4*seconds)
-        {
-            sp.color = Color.red;
-            
-        }
-        //Phase 3
-        else if(timeStart > 4*seconds && timeStart <= 5*seconds)
-        {
             sp.color = Color.green;
             
         }
-        //Phase 2
-        else if(timeStart > 5*seconds && timeStart <= 6*seconds)
-        {
-            sp.color = Color.red;
-            
-        }
-        //Phase 1
-        else if(timeStart > 6*seconds && timeStart <= 7*seconds)
-        {
-            sp.color = Color.blue;
-            
-        }
+       
         //Restart
-        else if (timeStart > 7*seconds)
+        else if (timeStart > 3*seconds)
         {
             timeStart = 0;
             sp.color = Color.blue;
