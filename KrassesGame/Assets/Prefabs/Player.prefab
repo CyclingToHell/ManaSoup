@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5683161242682136025}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05, y: -0.54, z: 0}
+  m_LocalPosition: {x: -0.15, y: -1.02, z: 0}
   m_LocalScale: {x: 0.4184502, y: 0.4515, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -329,18 +329,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.08706576, y: 0.0160864}
+  m_Offset: {x: -0.13135839, y: -0.017133713}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.46367472, y: 0.9678272}
+  m_Size: {x: 0.88445616, y: 2.0308542}
   m_EdgeRadius: 0
 --- !u!82 &2756847631470304486
 AudioSource:
@@ -846,7 +846,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5683161243727196479}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.51, y: 0.15, z: 0}
+  m_LocalPosition: {x: 0.28, y: 0.15, z: 0}
   m_LocalScale: {x: 0.4184502, y: 0.4515, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

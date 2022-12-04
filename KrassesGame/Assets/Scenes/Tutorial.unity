@@ -1354,6 +1354,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 484232302295281905, guid: d7f18207b1245414b8ec149f77d3baed, type: 3}
+      propertyPath: MaxDistance
+      value: 498.70386
+      objectReference: {fileID: 0}
+    - target: {fileID: 484232302295281905, guid: d7f18207b1245414b8ec149f77d3baed, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 25c4bc6a0a692a841b8ecfbd71c2bacd, type: 3}
@@ -1379,11 +1383,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5683161243224588918, guid: d7f18207b1245414b8ec149f77d3baed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.83
+      value: -6.82
       objectReference: {fileID: 0}
     - target: {fileID: 5683161243224588918, guid: d7f18207b1245414b8ec149f77d3baed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.44
+      value: -3.19
       objectReference: {fileID: 0}
     - target: {fileID: 5683161243224588918, guid: d7f18207b1245414b8ec149f77d3baed, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3557,7 +3561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ab7a4b17c281174fb4dc2c2994504e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1899850660}
 --- !u!1001 &1372278399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4026,6 +4030,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 694183850128298772, guid: 0fa16c8d0167c114db79fa70db4a9432, type: 3}
+      propertyPath: seconds
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 694183850849758282, guid: 0fa16c8d0167c114db79fa70db4a9432, type: 3}
       propertyPath: target
       value: 
