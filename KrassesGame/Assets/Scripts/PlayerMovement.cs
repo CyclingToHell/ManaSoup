@@ -113,6 +113,12 @@ public class PlayerMovement : MonoBehaviour
         //Movement
         horizontal = Input.GetAxisRaw("Horizontal");
 
+        if(horizontal != 0)
+        {
+            soundWalk.Play();
+        }
+        
+
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             soundJump.Play();
@@ -162,10 +168,12 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsGrounded()
     {
+        
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
     private bool IsWalled()
-    {
+    {   
+        
         return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
         
     }
@@ -173,14 +181,14 @@ public class PlayerMovement : MonoBehaviour
     private void WallSlide()
     {
         if (IsWalled() && !IsGrounded() && horizontal != 0f)
-        {
+        {   
             isWallSliding = true;
-            soundWall.Play();
+            
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
         }
         else
         {
-
+            soundWall.Play();
             isWallSliding = false;
         }
     }

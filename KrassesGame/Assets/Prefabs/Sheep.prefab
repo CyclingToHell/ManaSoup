@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 362355050423377090}
   - component: {fileID: 362355050423377091}
   - component: {fileID: 7692785317926151619}
-  - component: {fileID: 6017139839614126489}
   m_Layer: 0
   m_Name: Sheep
   m_TagString: Gegner
@@ -126,34 +125,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c72e94d7341b2244691871aee96ee874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seconds: 20
+  seconds: 19
   timeStart: 0
-  speed: 3
+  speed: 4
   target: {fileID: 5683161243224588921, guid: d7f18207b1245414b8ec149f77d3baed, type: 3}
   distance: 0
   origin: {x: 0, y: 0}
   groundDetection: {fileID: 8290212546943845164}
---- !u!50 &6017139839614126489
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 362355050423377088}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 1.8797203
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &2599928613679992933
 GameObject:
   m_ObjectHideFlags: 0
