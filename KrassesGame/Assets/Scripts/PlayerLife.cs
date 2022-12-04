@@ -28,6 +28,7 @@ public class PlayerLife : MonoBehaviour
         if(collision.gameObject.tag == "Gegner")
         {
             Die();
+            RestartLevel();
         }
         
         if(collision.gameObject.tag == "Ende")
@@ -46,6 +47,8 @@ public class PlayerLife : MonoBehaviour
     {
         rb.bodyType = RigidbodyType2D.Static;
         //anim.SetTrigger("death");
+
+        
     }
 
 

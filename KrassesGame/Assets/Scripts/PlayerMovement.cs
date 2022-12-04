@@ -50,6 +50,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
 
+    //Audio
+    [SerializeField] private AudioSource soundJump;
+
     void Update()
     {
         //CoyoteTime
@@ -108,6 +111,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
+            soundJump.Play();
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
 

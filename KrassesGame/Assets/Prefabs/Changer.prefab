@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3017150513685159271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3017150513685159065}
+  - component: {fileID: 3017150513685159066}
+  m_Layer: 0
+  m_Name: Changer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3017150513685159065
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3017150513685159271}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.4972873, y: -0.22375067, z: -0.115566}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3017150513685159066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3017150513685159271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49b1a3172447667468424347fc4fa9ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hintergrund: {fileID: 0}
+  schaf: {fileID: 0}
+  platform: {fileID: 0}
+  oneWayPlatform: {fileID: 0}
+  fallingPlatform: {fileID: 0}
+  spikes: {fileID: 0}
+  boden: {fileID: 0}
+  decke: {fileID: 0}
+  fillBlock: {fileID: 0}
+  wallLeft: {fileID: 0}
+  wallRight: {fileID: 0}
+  seconds: 20
+  timeStart: 0
+  Phase1Hintergrund: {fileID: 21300000, guid: 975aa158b6296b94e918685adbfb4150, type: 3}
+  Phase1Schaf: {fileID: 0}
+  Phase1Platform: {fileID: 0}
+  Phase1OneWayPlatform: {fileID: 0}
+  Phase1FallingPlatform: {fileID: 0}
+  Phase1Spikes: {fileID: 0}
+  Phase1Boden: {fileID: 0}
+  Phase1Decke: {fileID: 0}
+  Phase1FillBlock: {fileID: 0}
+  Phase1WallLeft: {fileID: 0}
+  Phase1WallRight: {fileID: 0}
+  Phase2Hintergrund: {fileID: 21300000, guid: 1a7f61f2018a3f24d92c2d8c549a57c4, type: 3}
+  Phase2Schaf: {fileID: 0}
+  Phase2Platform: {fileID: 0}
+  Phase2OneWayPlatform: {fileID: 0}
+  Phase2FallingPlatform: {fileID: 0}
+  Phase2Spikes: {fileID: 0}
+  Phase2Boden: {fileID: 0}
+  Phase2Decke: {fileID: 0}
+  Phase2FillBlock: {fileID: 0}
+  Phase2WallLeft: {fileID: 0}
+  Phase2WallRight: {fileID: 0}
+  Phase3Hintergrund: {fileID: 0}
+  Phase3Schaf: {fileID: 0}
+  Phase3Platform: {fileID: 0}
+  Phase3OneWayPlatform: {fileID: 0}
+  Phase3FallingPlatform: {fileID: 0}
+  Phase3Spikes: {fileID: 0}
+  Phase3Boden: {fileID: 0}
+  Phase3Decke: {fileID: 0}
+  Phase3FillBlock: {fileID: 0}
+  Phase3WallLeft: {fileID: 0}
+  Phase3WallRight: {fileID: 0}
