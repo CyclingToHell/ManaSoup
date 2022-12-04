@@ -7,6 +7,8 @@ TagManager:
   - Timer
   - Gegner
   - Leiter
+  - Platform
+  - Background
   layers:
   - Default
   - TransparentFX
