@@ -67,38 +67,38 @@ MonoBehaviour:
   Phase1PlatformLarge: {fileID: 21300000, guid: 69a0a906701494b0db7762f4e50c02f4, type: 3}
   Phase1OneWayPlatform: {fileID: 21300000, guid: 3d01fe4bba11d4321bb44694386a373d, type: 3}
   Phase1FallingPlatform: {fileID: 21300000, guid: 3d01fe4bba11d4321bb44694386a373d, type: 3}
-  Phase1Spikes: {fileID: 0}
-  Phase1Boden: {fileID: 0}
-  Phase1Decke: {fileID: 0}
-  Phase1FillBlock: {fileID: 0}
-  Phase1Wall: {fileID: 0}
-  Phase1HangingFillBlock: {fileID: 0}
-  Phase1HangingGroundBlock: {fileID: 0}
+  Phase1Spikes: {fileID: 21300000, guid: f5552bfb78ced42e4aaeaa2c8f916f14, type: 3}
+  Phase1Boden: {fileID: 21300000, guid: e2045e4430cf5437cb7608dbf3542395, type: 3}
+  Phase1Decke: {fileID: 21300000, guid: bc937ab75b6a04a169eb1afe9049533a, type: 3}
+  Phase1FillBlock: {fileID: 21300000, guid: 79339bf5c8c964be6a1ff14227960bbd, type: 3}
+  Phase1Wall: {fileID: 21300000, guid: 306535c22904c4853a4bfec94b605f2a, type: 3}
+  Phase1HangingFillBlock: {fileID: 21300000, guid: 869fcf689aa154885a51de016bc9b5b0, type: 3}
+  Phase1HangingGroundBlock: {fileID: 21300000, guid: bc937ab75b6a04a169eb1afe9049533a, type: 3}
   Phase2Hintergrund: {fileID: 21300000, guid: ff9985115fc9340878dc2ffe418f913b, type: 3}
   Phase2Schaf: {fileID: -1232815934, guid: f94b257b6afee274abb13687cb4bcc4c, type: 3}
-  Phase2PlatformSmall: {fileID: 0}
-  Phase2PlatformMedium: {fileID: 0}
-  Phase2PlatformLarge: {fileID: 0}
-  Phase2OneWayPlatform: {fileID: 0}
-  Phase2FallingPlatform: {fileID: 0}
-  Phase2Spikes: {fileID: 0}
-  Phase2Boden: {fileID: 0}
-  Phase2Decke: {fileID: 0}
-  Phase2FillBlock: {fileID: 0}
-  Phase2Wall: {fileID: 0}
-  Phase2HangingFillBlock: {fileID: 0}
-  Phase2HangingGroundBlock: {fileID: 0}
+  Phase2PlatformSmall: {fileID: 21300000, guid: 790239087b8b74665aabddf43c9e1203, type: 3}
+  Phase2PlatformMedium: {fileID: 21300000, guid: e6ab9be21b20543c1a230353878269ef, type: 3}
+  Phase2PlatformLarge: {fileID: 21300000, guid: 85e23b2ef029b49af83c37748fb38f54, type: 3}
+  Phase2OneWayPlatform: {fileID: 21300000, guid: c98a7283eadc14a0ba3c0b32d803a862, type: 3}
+  Phase2FallingPlatform: {fileID: 21300000, guid: 790239087b8b74665aabddf43c9e1203, type: 3}
+  Phase2Spikes: {fileID: 21300000, guid: 403441249523f409a8414621661c8704, type: 3}
+  Phase2Boden: {fileID: 21300000, guid: b3c1bb4a44e984e43904f6118ec2dfd2, type: 3}
+  Phase2Decke: {fileID: 21300000, guid: c906ac499308147549e86eaaecae86dc, type: 3}
+  Phase2FillBlock: {fileID: 21300000, guid: 0278b77f3f9ec4ff9a1d39014b05bc4a, type: 3}
+  Phase2Wall: {fileID: 21300000, guid: 56a5765c7203247dbbbe717e15a180ec, type: 3}
+  Phase2HangingFillBlock: {fileID: 21300000, guid: 960d2d67d057a48aa9f30f404e1d6849, type: 3}
+  Phase2HangingGroundBlock: {fileID: 21300000, guid: b396a255b206d4a2a8179c82021c4dca, type: 3}
   Phase3Hintergrund: {fileID: 21300000, guid: 80ddb488e960545a08c9d5c054dca730, type: 3}
   Phase3Schaf: {fileID: 1288699723, guid: f94b257b6afee274abb13687cb4bcc4c, type: 3}
-  Phase3PlatformSmall: {fileID: 0}
-  Phase3PlatformMedium: {fileID: 0}
-  Phase3PlatformLarge: {fileID: 0}
-  Phase3OneWayPlatform: {fileID: 0}
-  Phase3FallingPlatform: {fileID: 0}
-  Phase3Spikes: {fileID: 0}
-  Phase3Boden: {fileID: 0}
-  Phase3Decke: {fileID: 0}
-  Phase3FillBlock: {fileID: 0}
-  Phase3Wall: {fileID: 0}
-  Phase3HangingFillBlock: {fileID: 0}
-  Phase3HangingGroundBlock: {fileID: 0}
+  Phase3PlatformSmall: {fileID: 21300000, guid: e65589ec331204384bb8c17950a9d151, type: 3}
+  Phase3PlatformMedium: {fileID: 21300000, guid: 15e6d2430a71344e086d3df77ee81ee2, type: 3}
+  Phase3PlatformLarge: {fileID: 21300000, guid: 8513f78ea2af44efc8c50b06fcbf303d, type: 3}
+  Phase3OneWayPlatform: {fileID: 21300000, guid: 6ae5c8d6ca8ed4985955c2e39ebe9a52, type: 3}
+  Phase3FallingPlatform: {fileID: 21300000, guid: e65589ec331204384bb8c17950a9d151, type: 3}
+  Phase3Spikes: {fileID: 21300000, guid: d57460f890be34bf08bc8be3ea5b4c62, type: 3}
+  Phase3Boden: {fileID: 21300000, guid: 05b7b05656e5c4b068064b6365cf3357, type: 3}
+  Phase3Decke: {fileID: 21300000, guid: 009158583f4104150bca982bea180157, type: 3}
+  Phase3FillBlock: {fileID: 21300000, guid: 45cc88ad30d094e7583da9081ff36b46, type: 3}
+  Phase3Wall: {fileID: 21300000, guid: ac99b5488179f407f9516d7760bd33e0, type: 3}
+  Phase3HangingFillBlock: {fileID: 21300000, guid: 8373f21a5c5f143328a81d2d1216f5a0, type: 3}
+  Phase3HangingGroundBlock: {fileID: 21300000, guid: aab05be6cf544421d926b7b8d35621b1, type: 3}
