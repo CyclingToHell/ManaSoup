@@ -9,6 +9,7 @@ TagManager:
   - Leiter
   - Platform
   - Background
+  - Ende
   layers:
   - Default
   - TransparentFX

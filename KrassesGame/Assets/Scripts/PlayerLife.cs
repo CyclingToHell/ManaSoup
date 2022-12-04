@@ -33,7 +33,7 @@ public class PlayerLife : MonoBehaviour
         
         if(collision.gameObject.tag == "Ende")
         {
-            print("Ende");
+            menu();
 
         }
         
@@ -49,6 +49,10 @@ public class PlayerLife : MonoBehaviour
         //anim.SetTrigger("death");
 
         
+    }
+     public void menu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
 
