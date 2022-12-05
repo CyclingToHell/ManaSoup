@@ -122,6 +122,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             soundJump.Play();
+            StartCoroutine(AnimJump());
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
 
@@ -144,8 +145,9 @@ public class PlayerMovement : MonoBehaviour
         //DashAnim
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
-            
+            StartCoroutine(AnimDash());
             StartCoroutine(Dash());
+            
             soundDash.Play();
             
         }
@@ -182,7 +184,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (IsWalled() && !IsGrounded() && horizontal != 0f)
         {   
+            
             isWallSliding = true;
+            animator.SetBool("IsSliding", true);
+            
             
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
         }
@@ -190,6 +195,7 @@ public class PlayerMovement : MonoBehaviour
         {
             soundWall.Play();
             isWallSliding = false;
+            animator.SetBool("IsSliding", false);
         }
     }
 
@@ -197,6 +203,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isWallSliding)
         {
+            
             isWallJumping = false;
             wallJumpingDirection = -transform.localScale.x;
             wallJumpingCounter = wallJumpingTime;
@@ -209,7 +216,9 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (Input.GetButtonDown("Jump") && wallJumpingCounter > 0f)
-        {
+        {   
+
+            
             isWallJumping = true;
             soundJump.Play();
             rb.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
@@ -217,10 +226,12 @@ public class PlayerMovement : MonoBehaviour
 
             if (transform.localScale.x != wallJumpingDirection)
             {
+
                 isFacingRight = !isFacingRight;
                 Vector3 localScale = transform.localScale;
                 localScale.x *= -1f;
                 transform.localScale = localScale;
+                
             }
 
             Invoke(nameof(StopWallJumping), wallJumpingDuration);
@@ -263,4 +274,40 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(0.4f);
         isJumping = false;
     }
+
+    private IEnumerator AnimJump()
+    {
+        animator.SetBool("IsJumping", true);
+        yield return new WaitForSeconds(0.6f);
+        animator.SetBool("IsJumping", false);
+    }
+
+    private IEnumerator AnimWalk()
+    {
+        animator.SetBool("IsWalking", true);
+        yield return new WaitForSeconds(0.6f);
+        animator.SetBool("IsWalkling", false);
+    }
+
+    private IEnumerator AnimWallSlide()
+    {
+        animator.SetBool("IsSliding", true);
+        yield return new WaitForSeconds(0.1f);
+        animator.SetBool("IsSliding", false);
+    }
+
+    private IEnumerator AnimDash()
+    {
+        animator.SetBool("IsDashing", true);
+        yield return new WaitForSeconds(0.5f);
+        animator.SetBool("IsDashing", false);
+    }
+
+    private IEnumerator AnimWallJump()
+    {
+        animator.SetBool("IsWallJumping", true);
+        yield return new WaitForSeconds(0.6f);
+        animator.SetBool("IsWallJumping", false);
+    }
+    
 }
