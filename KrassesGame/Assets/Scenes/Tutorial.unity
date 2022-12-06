@@ -1915,6 +1915,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 9023818930444665726, guid: d7f18207b1245414b8ec149f77d3baed, type: 3}
+      propertyPath: health
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9023818930444665726, guid: d7f18207b1245414b8ec149f77d3baed, type: 3}
+      propertyPath: healthMax
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9023818930444665726, guid: d7f18207b1245414b8ec149f77d3baed, type: 3}
+      propertyPath: healthbar
+      value: 
+      objectReference: {fileID: 864450061}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7f18207b1245414b8ec149f77d3baed, type: 3}
 --- !u!1001 &389150645
@@ -3262,6 +3274,11 @@ PrefabInstance:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9163606044212974835, guid: c58c930ea363f9844b0f4463106dedde, type: 3}
   m_PrefabInstance: {fileID: 843782054}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &864450061 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5961826798130593002, guid: 0fa16c8d0167c114db79fa70db4a9432, type: 3}
+  m_PrefabInstance: {fileID: 1894683192}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &873260820
 PrefabInstance:
