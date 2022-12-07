@@ -66,6 +66,10 @@ public class PlayerLife : MonoBehaviour
             menu();
 
         }
+        if(collision.gameObject.tag == "Spike")
+        {
+            RestartLevel();
+        }
         
 
     }
