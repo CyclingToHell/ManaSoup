@@ -58,7 +58,7 @@ MonoBehaviour:
   wallArray: []
   hangingFillBlockArray: []
   hangingGroundBlockArray: []
-  seconds: 19
+  seconds: 20
   timeStart: 0
   Phase1Hintergrund: {fileID: 21300000, guid: a171f8678c1e84f2e93b52ec7fc959b4, type: 3}
   Phase1Schaf: {fileID: -511188185, guid: f94b257b6afee274abb13687cb4bcc4c, type: 3}

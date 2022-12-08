@@ -51,6 +51,7 @@ GameObject:
   - component: {fileID: 1699715145861994363}
   - component: {fileID: 7454129567795290013}
   - component: {fileID: 6516169221076489350}
+  - component: {fileID: 9187805159891406998}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -335,7 +336,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06115222, y: -0.11575425}
+  m_Offset: {x: -0.042164877, y: -0.05400601}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -346,7 +347,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5064225, y: 1.7528532}
+  m_Size: {x: 0.46844783, y: 1.6293566}
   m_EdgeRadius: 0
 --- !u!82 &2756847631470304486
 AudioSource:
@@ -355,7 +356,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5683161243224588921}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 638e2e107a02f3d4baca95672ce489fe, type: 3}
@@ -368,7 +369,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.6049738
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -451,7 +452,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5683161243224588921}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8cae1563e6cb63944ad2a62cfce5b9db, type: 3}
@@ -464,7 +465,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.7513337
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -547,7 +548,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5683161243224588921}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: de4103e44bdff2144b6417cdb9399428, type: 3}
@@ -560,7 +561,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.791658
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -643,7 +644,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5683161243224588921}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2cd9eaf7a70c4d347a8cc665df7e0f94, type: 3}
@@ -656,7 +657,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.9193515
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -732,6 +733,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!58 &9187805159891406998
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5683161243224588921}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.042567328, y: -0.7737452}
+  serializedVersion: 2
+  m_Radius: 0.23350129
 --- !u!1 &5683161243727196479
 GameObject:
   m_ObjectHideFlags: 0
