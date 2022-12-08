@@ -113,6 +113,8 @@ public class PlayerMovement : MonoBehaviour
         //Movement
         horizontal = Input.GetAxisRaw("Horizontal");
 
+        animator.SetFloat("Speed", Mathf.Abs(horizontal));
+
         if(horizontal != 0)
         {
             soundWalk.Play();
