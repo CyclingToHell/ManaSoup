@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seconds: 20
   timeStart: 0
-  speed: 4
+  speed: 2
   target: {fileID: 5683161243224588921, guid: d7f18207b1245414b8ec149f77d3baed, type: 3}
   distance: 0
   origin: {x: 0, y: 0}
