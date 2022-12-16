@@ -16,11 +16,13 @@ public class Switch : MonoBehaviour
     public GameObject[] fallingPlatformArray;
     public GameObject[] spikesArray;
     public GameObject[] bodenArray;
-    public GameObject[] deckeArray;
-    public GameObject[] fillBlockArray;
     public GameObject[] wallArray;
+
+    [Header("unnotig")]
     public GameObject[] hangingFillBlockArray;
     public GameObject[] hangingGroundBlockArray;
+    public GameObject[] deckeArray;
+    public GameObject[] fillBlockArray;
     
 
     //Timer
@@ -29,7 +31,7 @@ public class Switch : MonoBehaviour
     bool timerActive = true;
     private SpriteRenderer sp;
 
-    //Phase1
+    [Header("Phase1")]
     [SerializeField] private Sprite Phase1Hintergrund;
     [SerializeField] private Sprite Phase1Schaf;
     [SerializeField] private Sprite Phase1PlatformSmall;
@@ -45,7 +47,7 @@ public class Switch : MonoBehaviour
     [SerializeField] private Sprite Phase1HangingFillBlock;
     [SerializeField] private Sprite Phase1HangingGroundBlock;
 
-    //Phase2
+    [Header("Phase2")]
     [SerializeField] private Sprite Phase2Hintergrund;
     [SerializeField] private Sprite Phase2Schaf;
     [SerializeField] private Sprite Phase2PlatformSmall;
@@ -61,7 +63,7 @@ public class Switch : MonoBehaviour
     [SerializeField] private Sprite Phase2HangingFillBlock;
     [SerializeField] private Sprite Phase2HangingGroundBlock;
 
-    //Phase3
+    [Header("Phase3")]
     [SerializeField] private Sprite Phase3Hintergrund;
     [SerializeField] private Sprite Phase3Schaf;
     [SerializeField] private Sprite Phase3PlatformSmall;

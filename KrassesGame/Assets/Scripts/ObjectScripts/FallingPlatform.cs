@@ -5,8 +5,8 @@ using UnityEngine;
 public class FallingPlatform : MonoBehaviour
 {
     // Start is called before the first frame update
-    private float fallDelay = 1f;
-    private float destroyDelay = 2f;
+    private float fallDelay = 0f;
+    private float destroyDelay = 1f;
 
     [SerializeField] private Rigidbody2D rb;
 

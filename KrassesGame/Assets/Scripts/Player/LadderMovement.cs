@@ -6,7 +6,7 @@ public class LadderMovement : MonoBehaviour
 {
     private float vertical;
     // Start is called before the first frame updateprivate float vertical;
-    private float speed = 8f;
+    private float ladderSpeed = 8f;
     private bool isLadder;
     private bool isClimbing;
 
@@ -27,7 +27,7 @@ public class LadderMovement : MonoBehaviour
         if (isClimbing)
         {
             rb.gravityScale = 0f;
-            rb.velocity = new Vector2(rb.velocity.x, vertical * speed);
+            rb.velocity = new Vector2(rb.velocity.x, vertical * ladderSpeed);
         }
         else
         {

@@ -14,6 +14,7 @@ public class PlayerLife : MonoBehaviour
     [SerializeField] private GameObject healthbar;
     public Sprite[] life;
 
+    [SerializeField] private AudioSource deathScream;
 
     // Start is called before the first frame update
     private Rigidbody2D rb;
@@ -48,7 +49,7 @@ public class PlayerLife : MonoBehaviour
         }
         else
         {
-            menu();
+            RestartMenu();
         }
 
     }
@@ -58,12 +59,13 @@ public class PlayerLife : MonoBehaviour
         if(collision.gameObject.tag == "Gegner")
         {
             health = health - 1;
+            deathScream.Play();
 
         }
         
         if(collision.gameObject.tag == "Ende")
         {
-            menu();
+            Victory();
 
         }
         if(collision.gameObject.tag == "Spike")
@@ -84,14 +86,21 @@ public class PlayerLife : MonoBehaviour
 
         
     }
-     public void menu()
+     public void RestartMenu()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("DeathScreen");
     }
 
    private void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    private void Victory()
+    {
+        SceneManager.LoadScene("VictoryScreen");
+    }
+
+    
    
 }

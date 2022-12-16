@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void PlayGame()
+    public void StartGame()
     {
         SceneManager.LoadScene("Tutorial");
     }
@@ -15,4 +15,14 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
+
+    public void Menu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+    public void Control()
+    {
+        SceneManager.LoadScene("Control");
+    }
+
 }

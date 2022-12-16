@@ -42,6 +42,13 @@ public class PlayerMovement : MonoBehaviour
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
 
+
+    private float vertical;
+    // Start is called before the first frame updateprivate float vertical;
+    private float ladderSpeed = 8f;
+    private bool isLadder;
+    private bool isClimbing;
+
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -154,7 +161,17 @@ public class PlayerMovement : MonoBehaviour
             
         }
         Flip();
+
+
+        vertical = Input.GetAxisRaw("Vertical");
+
+        if (isLadder && Mathf.Abs(vertical) > 0f)
+        {
+            isClimbing = true;
+        }
     }
+
+    
 
     private void FixedUpdate()
     {
@@ -168,6 +185,16 @@ public class PlayerMovement : MonoBehaviour
         }
 
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+
+        if (isClimbing)
+        {
+            rb.gravityScale = 0f;
+            rb.velocity = new Vector2(rb.velocity.x, vertical * ladderSpeed);
+        }
+        else
+        {
+            rb.gravityScale = 4f;
+        }
     }
 
     private bool IsGrounded()
@@ -310,6 +337,24 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("IsWallJumping", true);
         yield return new WaitForSeconds(0.6f);
         animator.SetBool("IsWallJumping", false);
+    }
+
+    private void OnTriggerEnter2D(Collider2D ladder)
+    {
+        if (ladder.CompareTag("Leiter"))
+        {
+            isLadder = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D ladder)
+    {
+        if (ladder.CompareTag("Leiter"))
+        {
+            isLadder = false;
+            isClimbing = false;
+            doubleJump = true;
+        }
     }
     
 }
