@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5683161242682136024}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground Check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 6516169221076489350}
   - component: {fileID: 9187805159891406998}
   - component: {fileID: -4609630440789188713}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -217,6 +217,10 @@ MonoBehaviour:
   - {fileID: 655555295, guid: fcd2860d0ad9afe47b52f6c6d5c3aea4, type: 3}
   - {fileID: -1585399094, guid: fcd2860d0ad9afe47b52f6c6d5c3aea4, type: 3}
   deathScream: {fileID: -4609630440789188713}
+  flashColor: {r: 0, g: 0, b: 0, a: 1}
+  regularColor: {r: 1, g: 1, b: 1, a: 1}
+  flashDuration: 0.3
+  numberFlashes: 12
 --- !u!96 &5683161243224588923
 TrailRenderer:
   serializedVersion: 2
@@ -338,7 +342,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.042164877, y: -0.05400601}
+  m_Offset: {x: -0.042164877, y: -0.0027867556}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -349,7 +353,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.46844783, y: 1.6293566}
+  m_Size: {x: 0.46844783, y: 1.5269182}
   m_EdgeRadius: 0
 --- !u!82 &2756847631470304486
 AudioSource:
@@ -748,9 +752,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.042567328, y: -0.7737452}
+  m_Offset: {x: -0.041927144, y: -0.7737452}
   serializedVersion: 2
-  m_Radius: 0.23350129
+  m_Radius: 0.2315807
 --- !u!82 &-4609630440789188713
 AudioSource:
   m_ObjectHideFlags: 0
@@ -856,7 +860,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5683161243727196478}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall Check
   m_TagString: Untagged
   m_Icon: {fileID: 0}

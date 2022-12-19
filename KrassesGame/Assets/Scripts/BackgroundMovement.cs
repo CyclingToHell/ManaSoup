@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BackgroundMovement : MonoBehaviour
 {
-    private Vector3 offset = new Vector3(0f, 0f, 20f);
+    private Vector3 offset = new Vector3(0f, 0.5f, 20f);
     private float smoothTime = 0f;
     private Vector3 velocity = Vector3.zero;
 

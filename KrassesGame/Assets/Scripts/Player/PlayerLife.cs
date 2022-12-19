@@ -21,6 +21,14 @@ public class PlayerLife : MonoBehaviour
     private Animator anim;
     private SpriteRenderer sprite;
     private BoxCollider2D box;
+    private CircleCollider2D circle;
+
+    [Header("IFrame")]
+    [SerializeField] private Color flashColor;
+    [SerializeField] private Color regularColor;
+    public float flashDuration;
+    public int numberFlashes;
+
     
     
     // Start is called before the first frame update
@@ -30,7 +38,8 @@ public class PlayerLife : MonoBehaviour
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         box = GetComponent<BoxCollider2D>();
-        
+        circle = GetComponent<CircleCollider2D>();
+        Physics2D.IgnoreLayerCollision (6, 6, false);
     }
 
     void Update() 
@@ -49,6 +58,7 @@ public class PlayerLife : MonoBehaviour
         }
         else
         {
+            
             RestartMenu();
         }
 
@@ -59,8 +69,7 @@ public class PlayerLife : MonoBehaviour
         if(collision.gameObject.tag == "Gegner")
         {
             health = health - 1;
-            deathScream.Play();
-
+            StartCoroutine(FlashCo());
         }
         
         if(collision.gameObject.tag == "Ende")
@@ -69,7 +78,8 @@ public class PlayerLife : MonoBehaviour
 
         }
         if(collision.gameObject.tag == "Spike")
-        {
+        {   
+            
             RestartLevel();
         }
         
@@ -80,7 +90,8 @@ public class PlayerLife : MonoBehaviour
    
 
     private void Die() 
-    {
+    {   
+
         rb.bodyType = RigidbodyType2D.Static;
         //anim.SetTrigger("death");
 
@@ -99,6 +110,26 @@ public class PlayerLife : MonoBehaviour
     private void Victory()
     {
         SceneManager.LoadScene("VictoryScreen");
+    }
+
+
+
+
+    private IEnumerator FlashCo()
+    {   
+        deathScream.Play();
+        int temp = 0;
+        Physics2D.IgnoreLayerCollision (6, 6, true);
+        while(temp < numberFlashes)
+        {
+            sprite.color = flashColor;
+            yield return new WaitForSeconds(flashDuration);
+            sprite.color = regularColor;
+            yield return new WaitForSeconds(flashDuration);
+            temp++;
+        }
+        Physics2D.IgnoreLayerCollision (6, 6, false);
+       
     }
 
     
