@@ -87,6 +87,7 @@ public class PlayerMovement : MonoBehaviour
         {
             doubleJump = false;
         }
+        
 
         if (Input.GetButtonDown("Jump"))
         {   
@@ -100,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
                 
                 doubleJump = !doubleJump;
             }
+
         }
         //CoyoteTime
         else
@@ -247,10 +249,10 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && wallJumpingCounter > 0f)
         {   
 
+            doubleJump = false;
             
-            isWallJumping = true;
             soundJump.Play();
-            rb.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
+            rb.velocity = new Vector2(wallJumpingDirection * wallJumpingPower.x,wallJumpingPower.y );
             wallJumpingCounter = 0f;
 
             if (transform.localScale.x != wallJumpingDirection)
